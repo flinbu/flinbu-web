@@ -1,0 +1,45 @@
+@import "../global";
+
+.social-menu {
+    &__item {
+        .nav-link {
+            transition: .3s ease-in-out;
+            font-size: 20px;
+            padding: 10px;
+        }
+    }
+    &__light {
+        .social-menu {
+            &__item {
+                .nav-link {
+                    color: $gray;
+                }
+            }
+        }
+    }
+    &__dark {
+        .social-menu {
+            &__item {
+                .nav-link {
+                    color: rgba($white, .7);
+                }
+            }
+        }
+    }
+    @each $color in $social-scheme {
+        $color-name: nth($color, 1);
+        $color-val: nth($color, 2);
+        &__#{$color-name} {
+            .nav-link {
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $color-val;
+                }
+                .social-menu__color & {
+                    color: $color-val;
+                }
+            }
+        }
+    }
+}

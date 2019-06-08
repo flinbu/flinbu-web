@@ -1,0 +1,13 @@
+$colors: (
+    "pink": $pink
+);
+
+$primary: $red;
+$light: $white;
+$dark: $gray-darker;
+
+$font-family-sans-serif: $montserrat;
+
+$link-hover-decoration: none;
+
+@import "../../../node_modules/bootstrap/scss/bootstrap"; 

@@ -1,0 +1,73 @@
+[
+    {
+        "name": "hero",
+        "title": "Digital products designer",
+        "subtitle": "Let's create. Innovate. Together.",
+        "description": "My name is Felipe Linares. I'm a designer with over 8 years of experience. I work with you to design effective interfaces and user experiences based in \"personas\", in order to innovate and grow better.",
+        "buttons": [
+            {   
+                "type": "anchor",
+                "label": "Get in touch",
+                "target": "contact",
+                "theme": "main",
+                "color": "",
+                "shadow": true,
+                "icon": false,
+                "iconType": false,
+                "iconSize": false,
+                "iconRotate": false,
+                "iconFlip": false,
+                "iconPos": false,
+                "iconAnimation": false,
+                "iconAnimationOnHover": false
+            },
+            {
+                "type": "modal",
+                "label": "Request CV",
+                "target": "request-cv",
+                "theme": "text",
+                "color": "red",
+                "shadow": false,
+                "icon": false,
+                "iconType": false,
+                "iconSize": false,
+                "iconRotate": false,
+                "iconFlip": false,
+                "iconPos": false,
+                "iconAnimation": false,
+                "iconAnimationOnHover": false
+            }
+        ],
+        "image": "~/assets/images/hero-image.svg",
+        "logos": [
+            {
+                "name": "Send",
+                "image": "~/assets/images/logos/send.svg"
+            },
+            {
+                "name": "WeSend",
+                "image": "~/assets/images/logos/wesend.svg"
+            },
+            {
+                "name": "Connectas",
+                "image": "~/assets/images/logos/connectas.png"
+            },
+            {
+                "name": "Johnson Controls",
+                "image": "~/assets/images/logos/johnson-controls.svg"
+            },
+            {
+                "name": "Energiteca",
+                "image": "~/assets/images/logos/energiteca.png"
+            },
+            {
+                "name": "Plan Ciudad",
+                "image": "~/assets/images/logos/plan-ciudad.svg"
+            },
+            {
+                "name": "El País",
+                "image": "~/assets/images/logos/el-pais.svg"
+            }
+        ]
+    }
+]

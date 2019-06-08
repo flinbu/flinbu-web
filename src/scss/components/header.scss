@@ -1,0 +1,31 @@
+@import "../global";
+
+.header {
+    &__main {
+        background: $white;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    &__brand {
+        &--logo {
+            width: 40px;
+        }
+        &--name {
+            font-size: 20px;
+            color: $gray-dark;
+            padding: 0;
+            margin: 0;
+            a {
+                color: $gray-dark;
+            }
+        }
+        &--description {
+            margin: 0;
+            padding: 0;
+            color: $gray;
+            text-transform: uppercase;
+            font-size: 12px;
+            line-height: 12px;
+        }
+    }
+}

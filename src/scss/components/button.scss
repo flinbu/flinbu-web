@@ -1,0 +1,36 @@
+@import "../global";
+
+.app-button {
+    @extend .btn;
+    background: $gray;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    &__main {
+        @include linear-gradient($red, $pink);
+        .app-button__content {
+            color: $white;
+        }
+        &.app-button__has-shadow {
+            box-shadow: 0 5px 15px rgba($red, .2);
+        }
+    }
+    &__content {
+        color: findColorInvert($gray);
+    }
+    &__text {
+        background: none;
+        .app-button__content {
+            color: $gray;
+        }
+        @each $color in $color-scheme {
+            $color-name: nth($color, 1);
+            $color-val: nth($color, 2);
+            &.app-button__text--#{$color-name} {
+                .app-button__content {
+                    color: $color-val;
+                }
+            }
+        }
+    }
+} 
