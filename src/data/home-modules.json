@@ -38,35 +38,35 @@
                 "iconAnimationOnHover": false
             }
         ],
-        "image": "~/assets/images/hero-image.svg",
+        "image": "hero-image.svg",
         "logos": [
             {
                 "name": "Send",
-                "image": "~/assets/images/logos/send.svg"
+                "image": "logos/send.svg"
             },
             {
                 "name": "WeSend",
-                "image": "~/assets/images/logos/wesend.svg"
+                "image": "logos/wesend.svg"
             },
             {
                 "name": "Connectas",
-                "image": "~/assets/images/logos/connectas.png"
+                "image": "logos/connectas.png"
             },
             {
                 "name": "Johnson Controls",
-                "image": "~/assets/images/logos/johnson-controls.svg"
+                "image": "logos/johnson-controls.svg"
             },
             {
                 "name": "Energiteca",
-                "image": "~/assets/images/logos/energiteca.png"
+                "image": "logos/energiteca.png"
             },
             {
                 "name": "Plan Ciudad",
-                "image": "~/assets/images/logos/plan-ciudad.svg"
+                "image": "logos/plan-ciudad.svg"
             },
             {
                 "name": "El País",
-                "image": "~/assets/images/logos/el-pais.svg"
+                "image": "logos/el-pais.svg"
             }
         ]
     }

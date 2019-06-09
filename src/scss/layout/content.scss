@@ -1,0 +1,7 @@
+.content {
+    @extend .d-flex;
+    @extend .flex-wrap;
+    &__middle {
+        @extend .align-items-center;
+    }
+}

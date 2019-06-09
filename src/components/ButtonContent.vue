@@ -23,36 +23,36 @@
 export default {
     props: {
         label: {
-            type: String,
-            default: ""
+            type: [String, Boolean],
+            default: false
         },
         icon: {
-            type: String,
-            default: ""
+            type: [String, Boolean],
+            default: false
         },
         iconType: {
-            type: String,
-            default: ""
+            type: [String, Boolean],
+            default: false
         },
         iconSize: {
-            type: String,
-            default: ""
+            type: [String, Boolean],
+            default: false
         },
         iconRotate: {
-            type: String,
-            default: ""
+            type: [String, Boolean],
+            default: false
         },
         iconFlip: {
-            type: String,
-            default: ""
+            type: [String, Boolean],
+            default: false
         },
         iconPos: {
-            type: String,
+            type: [String, Boolean],
             default: "left"
         },
         iconAnimation: {
-            type: String,
-            default: ""
+            type: [String, Boolean],
+            default: false
         },
         iconAnimationOnHover: {
             type: Boolean,
