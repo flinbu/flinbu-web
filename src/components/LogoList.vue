@@ -7,7 +7,11 @@
                 class="logo-list__item"
                 @click="visitLogo(logo)"
             >
-                <g-image :src="logo[imageKey]" :alt="logo[titleKey]"/>
+                <g-image
+                    :src="imagePath(logo[imageKey])"
+                    :alt="logo[titleKey]"
+                    :style="`width: ${logoWidth}px;`"
+                />
             </li>
         </ul>
     </div>
@@ -26,6 +30,10 @@ export default {
         align: {
             type: String,
             default: "center"
+        },
+        logoWidth: {
+            type: String,
+            default: "100"
         },
         logoColor: {
             type: String,
@@ -72,5 +80,5 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-
+    @import "~/scss/components/logo-list.scss";
 </style>
