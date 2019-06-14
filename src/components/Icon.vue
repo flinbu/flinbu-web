@@ -69,18 +69,3 @@ export default {
     }
 }
 </script>
-<style lang="scss" scoped>
-    @font-face {
-        font-family: 'boxicons';
-        font-weight: normal;
-        font-style: normal;
-
-        src: url('../assets/fonts/boxicons.eot');
-        src: url('../assets/fonts/boxicons.eot') format('embedded-opentype'),
-        url('../assets/fonts/boxicons.woff2') format('woff2'),
-        url('../assets/fonts/boxicons.woff') format('woff'),
-        url('../assets/fonts/boxicons.ttf') format('truetype'),
-        url('../assets/fonts/boxicons.svg?#boxicons') format('svg');
-    }
-    @import "~/scss/components/icon.scss";
-</style>

@@ -1,0 +1,23 @@
+.footer {
+    &__main {
+        background: $gray-darker;
+        .footer {
+            &__menu {
+                &--item {
+                    &-link {
+                        color: $white;
+                        font-weight: 600;
+                        font-size: 18px;
+                    }
+                }
+            }
+            &__copyright {
+                font-size: 14px;
+                color: rgba($white, .3);
+                a {
+                    color: rgba($white, .3);
+                }
+            }
+        }
+    }
+}

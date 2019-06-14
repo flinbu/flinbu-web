@@ -4,18 +4,18 @@
     >
         <b-row>
             <b-col class="module__wrapper">
-                <b-row class="module__content mb-5 mb-md-7 mb-lg-8" align-v="center">
-                    <b-col class="module__data" cols="12" md="6" lg="5" offset-lg="1">
-                        <h3 class="module__subtitle mb-2 text-center text-md-left">{{ labels.subtitle }}</h3>
-                        <h2 class="module__title mb-5 text-center text-md-left">{{ labels.title }}</h2>
-                        <p class="module__description mb-5 text-center text-md-left">{{ labels.description }}</p>
+                <b-row class="module__content mb-5" align-v="center">
+                    <b-col class="module__data mb-5 mb-md-0" cols="12" md="6" lg="5" offset-lg="1">
+                        <h3 class="module__subtitle mb-2 text-center text-md-left" v-html="labels.subtitle"/>
+                        <h2 class="module__title mb-5 text-center text-md-left" v-html="labels.title"/>
+                        <div class="module__description mb-5 text-center text-md-left" v-html="labels.description"/>
                         <button-group
                             class="module__actions d-flex align-items-center justify-content-center justify-content-md-start flex-wrap"
                             :buttons="buttons"
                             button-class="module__action"
                         />
                     </b-col>
-                    <b-col class="module__image--wrapper d-none d-md-inline-flex" cols="12" md="6">
+                    <b-col class="module__image--wrapper" cols="12" md="6">
                         <g-image :src="imagePath('hero-image.svg')" class="img-fluid"/>
                     </b-col>
                 </b-row>
@@ -44,7 +44,8 @@ export default {
                     type: "external",
                     label: "Get in touch",
                     target: "https://forms.gle/NS1fLSukVBWzYw8K7",
-                    theme: "main"
+                    theme: "main",
+                    shadow: true
                 },
                 {
                     type: "external",
@@ -88,6 +89,3 @@ export default {
     }
 }
 </script>
-<style lang="scss" scoped>
-    @import "~/scss/components/modules/hero.scss";
-</style>

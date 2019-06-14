@@ -58,6 +58,10 @@ export default {
         linkKey: {
             type: String,
             default: ""
+        },
+        breakpoint: {
+            type: String,
+            default: "sm"
         }
     },
     computed: {
@@ -66,6 +70,10 @@ export default {
             let orientationClass = ` logo-list__${this.orientation}`
             let alignClass = ` logo-list__${this.align}`
             let linkClass = this.link ? ` logo-list__has-link` : ""
+
+            if (this.breakpoint != "sm") {
+                alignClass = `${alignClass}--${this.breakpoint}`
+            }
 
             return `${baseClass}${orientationClass}${alignClass}`
         }
@@ -79,6 +87,3 @@ export default {
     }
 }
 </script>
-<style lang="scss" scoped>
-    @import "~/scss/components/logo-list.scss";
-</style>

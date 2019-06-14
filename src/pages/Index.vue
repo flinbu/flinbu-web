@@ -1,14 +1,10 @@
 <template>
   <Layout>
-    <hero/>
+    <Hero/>
+    <UIDesign/>
+    <DataVisualization/>
+    <FrontendDevelopment/>
+    <CreationProccess/>
+    <Contact/>
   </Layout>
 </template>
-
-<script>
-import Hero from "~/components/modules/Hero"
-export default {
-  components: {
-    Hero
-  }
-}
-</script>

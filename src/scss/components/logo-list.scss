@@ -1,5 +1,3 @@
-@import "../global";
-
 .logo-list {
     list-style: none;
     margin: 0;
@@ -32,11 +30,51 @@
     }
     &__left {
         @extend .justify-content-start;
+        &--md,
+        &--lg,
+        &--xl {
+            @extend .justify-content-center;
+        }
+        &--md {
+            @include media-breakpoint-up(md) {
+                justify-content: flex-start !important;
+            }
+        }
+        &--lg {
+            @include media-breakpoint-up(lg) {
+                justify-content: flex-start !important;
+            }
+        }
+        &--xl {
+            @include media-breakpoint-up(xl) {
+                justify-content: flex-start !important;
+            }
+        }
     }
     &__center {
         @extend .justify-content-center;
     }
     &__right {
         @extend .justify-content-end;
+        &--md,
+        &--lg,
+        &--xl {
+            @extend .justify-content-end;
+        }
+        &--md {
+            @include media-breakpoint-up(md) {
+                justify-content: flex-end !important;
+            }
+        }
+        &--lg {
+            @include media-breakpoint-up(lg) {
+                justify-content: flex-end !important;
+            }
+        }
+        &--xl {
+            @include media-breakpoint-up(xl) {
+                justify-content: flex-end !important;
+            }
+        }
     }
 }

@@ -12,6 +12,15 @@ import Icon from "~/components/Icon"
 import AppButton from "~/components/AppButton"
 import ButtonGroup from "~/components/ButtonGroup"
 import LogoList from "~/components/LogoList"
+import AppFooter from "~/components/AppFooter"
+
+//Modules
+import Hero from "~/components/modules/Hero"
+import UIDesign from "~/components/modules/UIDesign"
+import DataVisualization from "~/components/modules/DataVisualization"
+import FrontendDevelopment from "~/components/modules/FrontendDevelopment"
+import CreationProccess from "~/components/modules/CreationProccess"
+import Contact from "~/components/modules/Contact"
 
 //SVG Assets
 import Brand from "~/assets/images/logo.svg"
@@ -37,6 +46,15 @@ export default function (Vue, { router, head, isClient }) {
   Vue.component('AppButton', AppButton)
   Vue.component('ButtonGroup', ButtonGroup)
   Vue.component('LogoList', LogoList)
+  Vue.component('AppFooter', AppFooter)
+
+  //Modules
+  Vue.component('Hero', Hero)
+  Vue.component('UIDesign', UIDesign)
+  Vue.component('DataVisualization', DataVisualization)
+  Vue.component('FrontendDevelopment', FrontendDevelopment)
+  Vue.component('CreationProccess', CreationProccess)
+  Vue.component('Contact', Contact)
 
   //SVG Assets
   Vue.component('Brand', Brand)

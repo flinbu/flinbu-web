@@ -6,7 +6,7 @@
 
 module.exports = {
   siteName: 'Felipe Linares',
-  siteDescription: "UX Designer & developer",
+  siteDescription: "UI Designer & developer",
   plugins: [
     {
       use: '@gridsome/plugin-google-analytics',
@@ -21,5 +21,12 @@ module.exports = {
     svgRule
       .use('vue-svg-loader')
       .loader('vue-svg-loader')
+  },
+  css: {
+    loaderOptions: {
+      scss: {
+        sourceComments: false
+      }
+    }
   }
 }

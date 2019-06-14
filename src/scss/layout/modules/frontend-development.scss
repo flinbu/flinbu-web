@@ -1,0 +1,12 @@
+.module__frontend {
+    @include media-breakpoint-up(lg) {
+        .module {
+            &__image {
+                width: 130%;
+                max-width: 130%;
+                margin-left: -80px;
+                margin-top: -80px;
+            }
+        }
+    }
+}
