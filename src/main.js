@@ -1,5 +1,6 @@
 //Frontend framework
 import BootstrapVue from 'bootstrap-vue'
+import VueScrollTo from "vue-scrollto"
 
 //Styles
 import '~/scss/app.scss'
@@ -13,6 +14,7 @@ import AppButton from "~/components/AppButton"
 import ButtonGroup from "~/components/ButtonGroup"
 import LogoList from "~/components/LogoList"
 import AppFooter from "~/components/AppFooter"
+import ContactForm from "~/components/ContactForm"
 
 //Modules
 import Hero from "~/components/modules/Hero"
@@ -34,6 +36,7 @@ export default function (Vue, { router, head, isClient }) {
 
   //Frontend framework
   Vue.use(BootstrapVue)
+  Vue.use(VueScrollTo)
 
   //Mixins
   Vue.mixin(ImagePath)
@@ -47,6 +50,7 @@ export default function (Vue, { router, head, isClient }) {
   Vue.component('ButtonGroup', ButtonGroup)
   Vue.component('LogoList', LogoList)
   Vue.component('AppFooter', AppFooter)
+  Vue.component('ContactForm', ContactForm)
 
   //Modules
   Vue.component('Hero', Hero)

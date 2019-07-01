@@ -1,0 +1,18 @@
+.module__contact {
+    @include media-breakpoint-down(lg) {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    .module {
+        &__image {
+            @include media-breakpoint-up(lg) {
+                width: 200%;
+                max-width: 200%;
+                margin-left: -150px;
+            }
+            @include media-breakpoint-down(md) {
+                max-width: 300px;
+            }
+        }
+    }
+}

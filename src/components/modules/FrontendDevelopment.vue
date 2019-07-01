@@ -38,9 +38,9 @@ export default {
             },
             buttons: [
                 {
-                    type: "external",
+                    type: "anchor",
                     label: "Let's create",
-                    target: "https://forms.gle/NS1fLSukVBWzYw8K7",
+                    target: "#contact",
                     theme: "main",
                     shadow: true
                 }
@@ -69,10 +69,6 @@ export default {
                 {
                     name: "Gulp",
                     image: "logos/gulp.svg"
-                },
-                {
-                    name: "Elementor",
-                    image: "logos/elementor.svg"
                 }
             ]
         }

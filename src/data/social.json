@@ -5,6 +5,11 @@
         "url": "https://dribbble.com/flinbu"
     },
     {
+        "network": "behance",
+        "icon": "behance",
+        "url": "https://behance.net/flinbu"
+    },
+    {
         "network": "github",
         "icon": "github",
         "url": "https://github.com/flinbu"

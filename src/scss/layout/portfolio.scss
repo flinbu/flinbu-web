@@ -1,0 +1,47 @@
+.portfolio {
+    &__item {
+        border: none;
+        border-radius: 3px;
+        box-shadow: 0 10px 30px -5px rgba($dark, .1);
+        cursor: pointer;
+        &--wrapper {
+            margin-bottom: 30px;
+        }
+        &--fields {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-align: left;
+            li {
+                display: inline-block;
+                text-transform: uppercase;
+                color: $gray;
+                font-size: 12px;
+                font-weight: 500;
+                margin-right: 5px;
+                &:after {
+                    content: ',';
+                }
+                &:last-child {
+                    margin-right: 0;
+                    &:after {
+                        content: '';
+                    }
+                }
+            }
+        }
+        &--button {
+            border: 1px solid $red;
+            color: $red;
+        }
+        .card {
+            &-body {
+                padding: 30px;
+            }
+            &-title {
+                font-weight: 300;
+                font-size: 24px;
+            }
+        }
+    }
+}

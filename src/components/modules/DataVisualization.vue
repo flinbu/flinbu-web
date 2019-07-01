@@ -40,9 +40,9 @@ export default {
             },
             buttons: [
                 {
-                    type: "external",
+                    type: "anchor",
                     label: "Get in touch",
-                    target: "https://forms.gle/NS1fLSukVBWzYw8K7",
+                    target: "#contact",
                     theme: "main",
                     shadow: true
                 }

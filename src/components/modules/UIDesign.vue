@@ -32,11 +32,17 @@ export default {
             },
             buttons: [
                 {
-                    type: "external",
+                    type: "anchor",
                     label: "Let's create",
-                    target: "https://forms.gle/NS1fLSukVBWzYw8K7",
+                    target: "#contact",
                     theme: "main",
                     shadow: true
+                },
+                {
+                    type: "link",
+                    label: "Some work",
+                    target: "/portfolio",
+                    theme: "text"
                 }
             ]
         }

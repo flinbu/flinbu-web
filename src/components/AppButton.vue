@@ -2,7 +2,7 @@
     <div>
         <g-link
             v-if="type == 'link'"
-            :href="target"
+            :to="target"
             :class="buttonClasses"
         >
             <button-content
@@ -153,7 +153,7 @@ export default {
             this.$root.$emit(modal, true)
         },
         doAnchor(anchor) {
-            this.$root.$emit("Anchor", anchor)
+            this.$scrollTo(anchor, 1000)
         }
     }
 }

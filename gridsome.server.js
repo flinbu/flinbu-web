@@ -4,8 +4,13 @@
 
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
+const axios = require("axios")
 const socialProfiles = require("./src/data/social.json")
 const homeModules = require("./src/data/home-modules.json")
+const Behance = {
+  apiKey: "XHqBHjFjvBMbN1l7WS11Vyo8yMt6IVUq",
+  username: "flinbu"
+}
 module.exports = function (api) {
   api.loadSource(store => {
     const contentType = store.addContentType({
@@ -36,6 +41,33 @@ module.exports = function (api) {
         image: item.image,
         logos: item.logos
       })
+    }
+  })
+
+  api.loadSource(async store => {
+    const { data } = await axios.get(`http://www.behance.net/v2/users/${Behance.username}/projects?api_key=${Behance.apiKey}`)
+    const contentType = store.addContentType({
+      typeName: "Portfolio"
+    })
+    for (const item of data.projects) {
+      let projectFields = []
+      for (let i = 0; i < item.fields.length; i++) {
+        projectFields[i] = {
+          title: item.fields[i]
+        }
+      }
+      let newNode = {
+        id: item.id,
+        name: item.name,
+        published_on: item.published_on,
+        created_on: item.created_on,
+        modified_on: item.modified_on,
+        url: item.url,
+        terms: projectFields,
+        covers: item.covers,
+        owner: item.owners[0]
+      }
+      contentType.addNode(newNode)
     }
   })
 

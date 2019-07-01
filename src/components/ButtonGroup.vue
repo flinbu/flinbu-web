@@ -17,7 +17,7 @@
             :icon-pos="button.iconPos"
             :icon-animation="button.iconAnimation"
             :icon-animation-on-hover="button.iconAnimationOnHover"
-            class="mb-3 mb-md-0"
+            class="mb-3 mb-md-0 mr-3"
         />
     </div>
 </template>
