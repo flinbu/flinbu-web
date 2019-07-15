@@ -1,0 +1,7 @@
+@each $color in $color-scheme {
+    $color-name: nth($color, 1);
+    $color-val: nth($color, 2);
+    .text-#{$color-name} {
+        color: $color-val !important;
+    }
+}

@@ -1,5 +1,5 @@
 <template>
-    <header class="header__main">   
+    <header class="header__main header__fixed">   
         <b-container class="d-flex align-items-center">
             <g-link 
                 to="/"
@@ -24,6 +24,3 @@
         }
     }
 </static-query>
-<style lang="scss" scoped>
-    @import "~/scss/components/header.scss";
-</style>

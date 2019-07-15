@@ -1,30 +1,33 @@
 <template>
     <b-container
-        fluid
-        class="module module__hero content content__middle"
+        class="module module__hero content content__middle pt-6 pb-6"
     >
-        <b-container class="module__wrapper">
-            <b-row class="module__content" align-v="center">
-                <b-col class="module__data" cols="12" md="6" lg="5" offset-lg="1">
-                    <h3 class="module__subtitle mb-2">{{ labels.subtitle }}</h3>
-                    <h2 class="module__title mb-5">{{ labels.title }}</h2>
-                    <p class="module__description">{{ labels.description }}</p>
-                    <button-group
-                        class="module__actions"
-                        :buttons="buttons"
-                        button-class="module__action"
-                    />
-                </b-col>
-                <b-col class="module__image--wrapper" cols="12" md="6">
-                    <hero-image/>
-                </b-col>
-            </b-row>
-            <b-row align-h="center">
-                <logo-list
-                    :logos="logos"
-                />
-            </b-row>
-        </b-container>
+        <b-row>
+            <b-col class="module__wrapper">
+                <b-row class="module__content mb-5" align-v="center">
+                    <b-col class="module__data mb-5 mb-md-0" cols="12" md="6" lg="5" offset-lg="1">
+                        <h3 class="module__subtitle mb-2 text-center text-md-left" v-html="labels.subtitle"/>
+                        <h2 class="module__title mb-5 text-center text-md-left" v-html="labels.title"/>
+                        <div class="module__description mb-5 text-center text-md-left" v-html="labels.description"/>
+                        <button-group
+                            class="module__actions d-flex align-items-center justify-content-center justify-content-md-start flex-wrap"
+                            :buttons="buttons"
+                            button-class="module__action"
+                        />
+                    </b-col>
+                    <b-col class="module__image--wrapper" cols="12" md="6">
+                        <g-image :src="imagePath('hero-image.svg')" class="img-fluid"/>
+                    </b-col>
+                </b-row>
+                <b-row align-h="center">
+                    <b-col>
+                        <logo-list
+                            :logos="logos"
+                        />
+                    </b-col>
+                </b-row>
+            </b-col>
+        </b-row>
     </b-container>
 </template>
 <script>
@@ -40,13 +43,14 @@ export default {
                 {
                     type: "anchor",
                     label: "Get in touch",
-                    target: "contact",
-                    theme: "main"
+                    target: "#contact",
+                    theme: "main",
+                    shadow: true
                 },
                 {
-                    type: "modal",
+                    type: "external",
                     label: "Request CV",
-                    target: "request-cv",
+                    target: process.env.GF_CV_REQUEST,
                     theme: "text",
                     color: "red"
                 }
@@ -54,37 +58,34 @@ export default {
             logos: [
                 {
                     name: "Send",
-                    image: "~/assets/images/logos/send.svg"
+                    image: "logos/send.svg"
                 },
                 {
                     name: "WeSend",
-                    image: "~/assets/images/logos/wesend.svg"
+                    image: "logos/wesend.svg"
                 },
                 {
                     name: "Connectas",
-                    image: "~/assets/images/logos/connectas.png"
+                    image: "logos/connectas.png"
                 },
                 {
                     name: "Johnson Controls",
-                    image: "~/assets/images/logos/johnson-controls.svg"
+                    image: "logos/johnson-controls.svg"
                 },
                 {
                     name: "Energiteca",
-                    image: "~/assets/images/logos/energiteca.png"
+                    image: "logos/energiteca.png"
                 },
                 {
                     name: "Plan Ciudad",
-                    image: "~/assets/images/logos/plan-ciudad.svg"
+                    image: "logos/plan-ciudad.svg"
                 },
                 {
                     name: "El País",
-                    image: "~/assets/images/logos/el-pais.svg"
+                    image: "logos/el-pais.svg"
                 }
             ]
         }
     }
 }
 </script>
-<style lang="scss" scoped>
-    @import "~/scss/components/modules/hero.scss";
-</style>

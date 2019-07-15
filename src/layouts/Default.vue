@@ -2,6 +2,7 @@
   <main class="app">
     <app-header/>
     <slot/>
+    <app-footer/>
   </main>
 </template>
 

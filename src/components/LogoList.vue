@@ -7,7 +7,11 @@
                 class="logo-list__item"
                 @click="visitLogo(logo)"
             >
-                <g-image :src="logo[imageKey]" :alt="logo[titleKey]"/>
+                <g-image
+                    :src="imagePath(logo[imageKey])"
+                    :alt="logo[titleKey]"
+                    :style="`width: ${logoWidth}px;`"
+                />
             </li>
         </ul>
     </div>
@@ -26,6 +30,10 @@ export default {
         align: {
             type: String,
             default: "center"
+        },
+        logoWidth: {
+            type: String,
+            default: "100"
         },
         logoColor: {
             type: String,
@@ -50,6 +58,10 @@ export default {
         linkKey: {
             type: String,
             default: ""
+        },
+        breakpoint: {
+            type: String,
+            default: "sm"
         }
     },
     computed: {
@@ -58,6 +70,10 @@ export default {
             let orientationClass = ` logo-list__${this.orientation}`
             let alignClass = ` logo-list__${this.align}`
             let linkClass = this.link ? ` logo-list__has-link` : ""
+
+            if (this.breakpoint != "sm") {
+                alignClass = `${alignClass}--${this.breakpoint}`
+            }
 
             return `${baseClass}${orientationClass}${alignClass}`
         }
@@ -71,6 +87,3 @@ export default {
     }
 }
 </script>
-<style lang="scss" scoped>
-
-</style>

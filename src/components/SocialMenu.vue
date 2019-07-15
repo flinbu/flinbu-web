@@ -5,7 +5,7 @@
             :key="index"
             :href="social.node.url"
             target="_blank"
-            :class="`social-menu__item social-menu__${social.node.network}`"
+            :class="`social-menu__item social-menu__${social.node.network} social-menu__${iconSize}`"
         >
             <icon
                 :name="social.node.icon"
@@ -33,11 +33,11 @@ export default {
         scheme: {
             type: String,
             default: "light"
+        },
+        iconSize: {
+            type: String,
+            default: "md"
         }
     }
 }
 </script>
-
-<style lang="scss" scoped>
-    @import "~/scss/components/social-menu.scss";
-</style>

@@ -1,7 +1,8 @@
+const path = require("path")
 export default {
     methods: {
         imagePath(image) {
-            return `~/assets/image/${image}`
+            return `./assets/images/${image}`
         }
     }
 }

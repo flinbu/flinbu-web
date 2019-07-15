@@ -1,5 +1,3 @@
-@import "../global";
-
 .app-button {
     @extend .btn;
     background: $gray;
@@ -12,7 +10,16 @@
             color: $white;
         }
         &.app-button__has-shadow {
-            box-shadow: 0 5px 15px rgba($red, .2);
+            box-shadow: 0 5px 15px -5px rgba($red, .3);
+        }
+        .module__red & {
+            background: $white;
+            .app-button__content {
+                color: $red;
+            }
+            &.app-button__has-shadow {
+                box-shadow: 0 5px 15px -5px rgba($black, .2);
+            }
         }
     }
     &__content {

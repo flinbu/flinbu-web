@@ -1,11 +1,19 @@
-@import "../global";
-
 .social-menu {
     &__item {
         .nav-link {
             transition: .3s ease-in-out;
             font-size: 20px;
             padding: 10px;
+        }
+    }
+    &__lg {
+        .nav-link {
+            font-size: 26px;
+        }
+    }
+    &__xl {
+        .nav-link {
+            font-size: 36px;
         }
     }
     &__light {

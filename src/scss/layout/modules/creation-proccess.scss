@@ -1,0 +1,57 @@
+.module__creation {
+    overflow: hidden;
+    .module {
+        &__background {
+            left: -450px;
+            bottom: -20px;
+        }
+        &__container {
+            @include media-breakpoint-up(lg) {
+                width: 100%;
+            }
+        }
+        &__image {
+            @include media-breakpoint-down(md) {
+                max-width: 60%;
+            }
+        }
+        &__wrapper {
+            @include media-breakpoint-down(md) {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
+}
+
+.creation-proccess {
+    &__content {
+        background: $white;
+        border-radius: 3px;
+        width: 100%;
+        height: 100%;
+        padding: 50px;
+        @extend .d-inline-flex;
+        @extend .align-items-center;
+        @extend .flex-wrap;
+        box-shadow: 0 5px 30px rgba($black, .15);
+        @include media-breakpoint-down(md) {
+            padding: 30px;
+        }
+    }
+    &__title {
+        color: $black;
+        font-weight: 600;
+        font-size: 24px;
+        margin-bottom: 30px;
+        &--step {
+            font-weight: 300;
+            color: $red;
+        }
+    }
+    &__description {
+        font-size: 16px;
+        font-weight: 400;
+        color: $gray;
+    }
+}

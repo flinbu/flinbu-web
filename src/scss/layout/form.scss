@@ -1,0 +1,22 @@
+.contact-form {
+    legend {
+        font-weight: 600;
+        font-size: 14px;
+    }
+    .form-control {
+        border-radius: 3px;
+        border: 1px solid rgba($gray, .2);
+        &:focus,
+        &:hover,
+        &:active {
+            outline: none;
+            border-color: rgba($gray, .2);
+            box-shadow: 0 5px 10px -5px rgba($black, .05);
+        }
+    }
+    &__submit {
+        min-width: 200px;
+        @extend .app-button__main;
+        @extend .app-button__has-shadow;
+    }
+}

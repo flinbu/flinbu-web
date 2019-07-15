@@ -1,0 +1,24 @@
+.module__data {
+    @include media-breakpoint-up(lg) {
+        .module {
+            &__image {
+                width: 115%;
+                max-width: 115%;
+                &--wrapper {
+                    margin-left: -150px;
+                }
+            }
+        }
+    }
+    @include media-breakpoint-only(md) {
+        .module {
+            &__image {
+                width: 150%;
+                max-width: 150%;
+                &--wrapper {
+                    margin-left: -150px;
+                }
+            }
+        }
+    }
+}

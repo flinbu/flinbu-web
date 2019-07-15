@@ -1,5 +1,6 @@
 //Frontend framework
 import BootstrapVue from 'bootstrap-vue'
+import VueScrollTo from "vue-scrollto"
 
 //Styles
 import '~/scss/app.scss'
@@ -12,12 +13,21 @@ import Icon from "~/components/Icon"
 import AppButton from "~/components/AppButton"
 import ButtonGroup from "~/components/ButtonGroup"
 import LogoList from "~/components/LogoList"
+import AppFooter from "~/components/AppFooter"
+import ContactForm from "~/components/ContactForm"
+
+//Modules
+import Hero from "~/components/modules/Hero"
+import UIDesign from "~/components/modules/UIDesign"
+import DataVisualization from "~/components/modules/DataVisualization"
+import FrontendDevelopment from "~/components/modules/FrontendDevelopment"
+import CreationProccess from "~/components/modules/CreationProccess"
+import Contact from "~/components/modules/Contact"
 
 //SVG Assets
 import Brand from "~/assets/images/logo.svg"
 import BrandLight from "~/assets/images/logo-light.svg"
 import BrandDark from "~/assets/images/logo-dark.svg"
-import HeroImage from "~/assets/images/hero-image.svg"
 
 //Plugins
 import ImagePath from "~/plugins/ImagePath.js"
@@ -26,6 +36,7 @@ export default function (Vue, { router, head, isClient }) {
 
   //Frontend framework
   Vue.use(BootstrapVue)
+  Vue.use(VueScrollTo)
 
   //Mixins
   Vue.mixin(ImagePath)
@@ -38,16 +49,30 @@ export default function (Vue, { router, head, isClient }) {
   Vue.component('AppButton', AppButton)
   Vue.component('ButtonGroup', ButtonGroup)
   Vue.component('LogoList', LogoList)
+  Vue.component('AppFooter', AppFooter)
+  Vue.component('ContactForm', ContactForm)
+
+  //Modules
+  Vue.component('Hero', Hero)
+  Vue.component('UIDesign', UIDesign)
+  Vue.component('DataVisualization', DataVisualization)
+  Vue.component('FrontendDevelopment', FrontendDevelopment)
+  Vue.component('CreationProccess', CreationProccess)
+  Vue.component('Contact', Contact)
 
   //SVG Assets
   Vue.component('Brand', Brand)
   Vue.component('BrandLight', BrandLight)
   Vue.component('BrandDark', BrandDark)
-  Vue.component('HeroImage', HeroImage)
 
   //Load libraries on head
   head.link.push({
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,800&display=swap"
+  })
+  head.script.push({
+    src: "https://embed.small.chat/T105JNEHFGC1Q3EWSG.js",
+    body: true,
+    assync: true
   })
 }
