@@ -8,8 +8,8 @@ const axios = require("axios")
 const socialProfiles = require("./src/data/social.json")
 const homeModules = require("./src/data/home-modules.json")
 const Behance = {
-  apiKey: "XHqBHjFjvBMbN1l7WS11Vyo8yMt6IVUq",
-  username: "flinbu"
+  apiKey: process.env.BEHANCE_API_KEY,
+  username: process.env.BEHANCE_USERNAME
 }
 module.exports = function (api) {
   api.loadSource(store => {

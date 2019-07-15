@@ -50,7 +50,7 @@ export default {
                 {
                     type: "external",
                     label: "Request CV",
-                    target: "https://forms.gle/VPNkTfKm1wZiUntP9",
+                    target: process.env.GF_CV_REQUEST,
                     theme: "text",
                     color: "red"
                 }

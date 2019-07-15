@@ -5,13 +5,22 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Felipe Linares',
-  siteDescription: "UI Designer & developer",
+  siteName: process.env.SITE_NAME,
+  siteDescription: process.env.SITE_DESCRIPTION,
   plugins: [
     {
       use: '@gridsome/plugin-google-analytics',
       options: {
-        id: 'UA-63907285-2'
+        id: process.env.GA_UA
+      }
+    },
+    {
+      use: '@gridsome/source-airtable',
+      options: {
+        apiKey: process.env.AIRTABLE_API_KEY,
+        baseId: process.env.AIRTABLE_BASE_ID,
+        tableName: 'Gigs',
+        typeName: 'Gig'
       }
     }
   ],

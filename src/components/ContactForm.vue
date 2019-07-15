@@ -103,7 +103,7 @@ export default {
             data.append("email", this.form.email)
             data.append("message", this.form.message)
             
-            let actionURL = "https://getform.io/f/bc4077af-db2a-438a-8236-59e7504aff44"
+            let actionURL = process.env.CONTACT_ACTION
 
             await axios
                     .post(actionURL, data)
